@@ -1,0 +1,22 @@
+\usepackage{dsfont}
+\usepackage{fontspec}
+
+\setsansfont{FiraSans}[
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic,
+]
+
+\setmainfont{FiraMono}[
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Oblique,
+  BoldItalicFont=*-BoldOblique,
+]
+
+% \newfontface\emojifont{Noto Color Emoji}[Renderer=Harfbuzz]
+\newfontface\emojifont{Apple Color Emoji}[Renderer=Harfbuzz]
+\newcommand{\emj}[1]{{\emojifont #1}}

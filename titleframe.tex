@@ -1,0 +1,41 @@
+{
+\metroset{progressbar=none, numbering=none}
+
+\setbeamertemplate{frame footer}{%
+	\hfill%
+	\includegraphics[align=c,height=0.8cm]{./figures/logos/lcqb.png}
+	\hfill%
+	\includegraphics[align=c, height=0.7cm]{./figures/logos/logo_SU.pdf}%
+	\hfill%
+	\includegraphics[align=c, height=0.5cm]{./figures/logos/logo_lbbe.pdf}%
+	\hfill%
+	\includegraphics[align=c, height=0.7cm]{./figures/logos/logo_ucbl.png}%
+	\hfill%
+	\includegraphics[align=c, height=0.7cm]{./figures/logos/logo_cnrs.pdf}%
+	\hfill%
+}
+\begin{frame}[noframenumbering]
+	\vspace*{2.5cm}
+	\begin{columns}
+		\hfill
+		\begin{column}{0.75\textwidth}
+			\ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+		\end{column}
+		\begin{column}{0.25\textwidth}
+			% \hspace*{-1.5cm}
+			\hspace*{-.5cm}
+			% \includegraphics[height=\textwidth]{./figures/logos/PF.png}
+			\includegraphics[width=\textwidth]{./figures/logos/PF.png}
+		\end{column}
+		% \hfill
+	\end{columns}
+	\ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+	\usebeamertemplate*{title separator}
+	\vspace{-0.5cm}
+	\ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+	\ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+	\ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+	\vfill
+	\vspace*{1mm}
+\end{frame}
+}

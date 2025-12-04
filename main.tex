@@ -1,0 +1,57 @@
+%! TEX program = lualatex
+
+\documentclass[aspectratio=43,table]{beamer}
+\usetheme[progressbar=foot, numbering=fraction]{metropolis}
+
+% for custom settings
+\newcommand{\defineVariable}[2]{\newcommand{#1}{#2}}
+
+\input{theme/bib}     % Biblatex options and customizations
+\input{theme/fonts}   % Custom fonts
+\input{theme/drawing} % TiKZ options
+\input{theme/theme}   % Other theming options
+
+% Set biblatex file to use
+\addbibresource{talk.bib}
+
+%%%%%%%%%%%%%%%%%%
+% OTHER PACKAGES %
+%%%%%%%%%%%%%%%%%%
+\usepackage{appendixnumberbeamer} % Manage appendix slides
+\usepackage{booktabs}             % Pretty tables (1/2)
+\usepackage{makecell}             % Pretty tables (2/2)
+\usepackage{graphicx}             % Images
+\usepackage{graphbox}             % Position images
+\usepackage{amsmath}              % Math symbols (1/3)
+\usepackage{amssymb}              % Math symbols (2/3)
+\usepackage{physics}              % Math symbols (3/3)
+\usepackage{xcolor}               % Better colors
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TALK SPECIFIC SETTINGS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defineVariable{\venue}{Venue}
+\defineVariable{\presenter}{Presenter}
+\title{My Title}
+\author{\textbf{Presenter}, author 2, author 3}
+\date{\venue\;-\;\today}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT STRUCTURE %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% custom title frame
+\input{titleframe.tex}
+
+% main content of the talk
+\input{content.tex}
+
+% custom thank you frame
+\input{thanks.tex}
+
+% references + appendixes
+\input{appendix.tex}
+
+\end{document}

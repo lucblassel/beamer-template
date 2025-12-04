@@ -1,0 +1,33 @@
+
+% Bibliography management
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  firstinits=true,
+  url=false,
+  isbn=false,
+  doi=false,
+  eprint=false,
+  maxnames=2,
+  date=year
+]{biblatex}
+\renewcommand{\bibfont}{\footnotesize}
+\setbeamerfont{bibliography entry author}{size=\scriptsize}
+\setbeamerfont{bibliography entry title}{size=\scriptsize}
+\setbeamerfont{bibliography entry location}{size=\scriptsize}
+\setbeamerfont{bibliography entry note}{size=\scriptsize}
+\setbeamertemplate{bibliography item}{}
+% Add ULR or DOI hyperlink to title in references
+\newbibmacro{string+doi}[1]{%
+  \iffieldundef{doi}{\iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}	
+\DeclareFieldFormat*{title}{\usebibmacro{string+doi}{\mkbibemph{#1}}}
+
+% Footnote with no marker
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{\tiny \textcolor{DarkGray}{#1}}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\renewcommand{\footnoterule}{}
+

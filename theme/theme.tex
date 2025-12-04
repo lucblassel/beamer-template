@@ -1,0 +1,58 @@
+
+
+% Define custom colors
+\colorlet{LightGray}{black!30}
+\colorlet{Gray}{black!50}
+\colorlet{DarkGray}{black!70}
+\colorlet{DarkestGray}{black!80}
+\colorlet{R}{black!10!red}
+\colorlet{O}{black!10!orange}
+\colorlet{Y}{black!10!yellow}
+\colorlet{G}{black!20!green}
+\colorlet{C}{black!10!cyan}
+\colorlet{B}{black!10!blue}
+\colorlet{V}{black!10!violet}
+\colorlet{M}{black!10!magenta}
+
+\colorlet{BrlenColor}{LightGray}
+
+% Plotting colors
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{darkslategray38}{RGB}{38,38,38}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lavender234234242}{RGB}{234,234,242}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+% Laurent's attention colors
+\definecolor{lj-red}{HTML}{AE2012}
+\definecolor{lj-yellow}{HTML}{EE9B00}
+\definecolor{lj-orange}{HTML}{CA6702}
+\definecolor{lj-green}{HTML}{006D77}
+\definecolor{lj-blue}{HTML}{03045E}
+
+% For hyperlinks
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,citecolor=links,urlcolor=links,filecolor=links}
+
+% Set progress bar variables
+\setbeamercolor{normal text}{fg=black!90, bg=black!2}
+\setbeamercolor{palette primary}{%
+	use=normal test,
+	fg=black!2,
+	bg=DarkGray
+}
+\setbeamercolor{progress bar}{fg=DarkGray, bg=LightGray}
+
+% Customize progress bar
+\makeatletter
+% Line widths
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+% Set custom footer
+\setbeamertemplate{frame footer}{\texttt{\tiny \presenter~-~\venue}}
+

@@ -1,0 +1,44 @@
+
+{%
+\metroset{progressbar=none, numbering=none}
+\setbeamertemplate{frame footer}{}
+\setbeamercolor{item}{fg=black!2}
+% Remove footnote rule
+\renewcommand\footnoterule{}
+\begin{frame}[noframenumbering,standout]{Thank you all!}
+	% \vspace{2em}
+	\begin{columns}
+		\hfill
+		\begin{column}{.4\textwidth}
+			\large
+			Thanks to:\;\textsuperscript{\tiny\textmd{(No particular order)}}
+			\smallskip
+			\begin{itemize}
+				\item Name 1
+				\item Name 2
+			\end{itemize}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\centering
+			\resizebox{!}{.8\textheight}{%
+				\begin{tikzpicture}
+					\def\off{1.75}
+
+					\node[fill=black!2,circle,inner sep=6.6] at (-0.085,-\off) {~};
+
+					\node[inner sep=0,anchor=center] (lbbe) at (0,0)          {\includegraphics[width=.30\textwidth]{./figures/logos/logo_lbbe.pdf}};
+					\node[inner sep=0,anchor=center] (cnrs) at (\off,0)       {\includegraphics[width=.15\textwidth]{./figures/logos/logo_cnrs.pdf}};
+					\node[inner sep=0,anchor=center] (ucbl) at (0,-\off)      {\includegraphics[width=.25\textwidth]{./figures/logos/logo_ucbl.png}};
+					\node[inner sep=0,anchor=center] (su)   at (\off,-\off)   {\includegraphics[width=.25\textwidth]{./figures/logos/logo_SU.pdf}};
+					\node[inner sep=0,anchor=center] (anr)  at (0,-2*\off)    {\includegraphics[width=.25\textwidth]{./figures/logos/logo_anr.pdf}};
+					\node[inner sep=0,anchor=center] (jz)   at (\off,-2*\off) {\includegraphics[width=.25\textwidth]{./figures/logos/jean-zay.png}};
+					\node[inner sep=0,anchor=center] (jz)   at (.5*\off,-3*\off) {\includegraphics[width=.15\textwidth]{./figures/logos/lcqb.png}};
+
+				\end{tikzpicture}%
+			}
+		\end{column}
+		\hfill
+	\end{columns}
+	\blfootnote{\scriptsize\textcolor{black!2}{Special thanks to Jean-Zay for all the GPUs!}}
+\end{frame}%
+}
