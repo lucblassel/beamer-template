@@ -1,5 +1,9 @@
 
 {%
+
+\setlength{\portraitsize}{1.2cm} % adjust if desired
+
+
 \metroset{progressbar=none, numbering=none}
 \setbeamertemplate{frame footer}{}
 \setbeamercolor{item}{fg=black!2}
@@ -7,16 +11,20 @@
 \renewcommand\footnoterule{}
 \begin{frame}[noframenumbering,standout]{Thank you all!}
 	% \vspace{2em}
-	\begin{columns}
+	\begin{columns}[T,totalwidth=\textwidth]
 		\hfill
 		\begin{column}{.4\textwidth}
-			\large
-			Thanks to:\;\textsuperscript{\tiny\textmd{(No particular order)}}
-			\smallskip
-			\begin{itemize}
-				\item Name 1
-				\item Name 2
-			\end{itemize}
+			{
+				\scriptsize
+				\PortraitGrid{2}{
+					{figures/portraits/person1.jpg}/Alice,
+					{figures/portraits/person2.jpg}/Bob,
+					{figures/portraits/person3.jpg}/Charlie,
+					{figures/portraits/person4.jpg}/Diana,
+					{figures/portraits/person5.jpg}/Jane
+				}
+			}
+
 		\end{column}
 		\begin{column}{.4\textwidth}
 			\centering

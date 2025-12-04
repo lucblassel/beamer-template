@@ -1,0 +1,37 @@
+
+\usepackage{pgffor}
+\usepackage{multicol}
+
+% Circle size (portrait diameter)
+\newlength{\portraitsize}
+\setlength{\portraitsize}{2cm} % adjust if desired
+
+% ---------------------------------------------------------
+% Render portrait 
+%   #1 = path/to/img
+%   #2 = name
+% ---------------------------------------------------------
+\newcommand{\CirclePortrait}[2]{%
+	\begin{tikzpicture}
+		% Name
+		\node[anchor=north] at (0,-.5\portraitsize - 0.05em) {#2};
+		% Clipped Image circle
+		\clip (0,0) circle (.5\portraitsize);
+		\node at (0,0) {\includegraphics[height=\portraitsize]{#1}};
+	\end{tikzpicture}
+}
+
+% ---------------------------------------------------------
+% PortraitGrid:
+%   #1 = number of columns
+%   #2 = {{path/to/img}/{name},...,{path/to/img}/{name}}
+% ---------------------------------------------------------
+\newcommand{\PortraitGrid}[2]{%
+	\begin{multicols}{#1}
+		\centering
+		\setlength{\parskip}{1em}
+		\foreach \image / \name in {#2} {%
+				\CirclePortrait{\image}{\name}
+			}
+	\end{multicols}
+}
