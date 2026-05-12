@@ -1,0 +1,10 @@
+\makeatletter
+\setbeameroption{hide notes} % default value is slides only
+\ifdefstring{\NotesMode}{notes}{% show only notes
+	\setbeameroption{show only notes}
+}{}
+\ifdefstring{\NotesMode}{both}{% show notes and slides together
+	\setbeameroption{show notes on second screen=right}
+}{}
+\makeatother
+

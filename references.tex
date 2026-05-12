@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY %
+%%%%%%%%%%%%%%%%
+
+\section*{References}
+
+\begin{frame}[allowframebreaks,noframenumbering,plain] % references for the talk
+	\printbibliography[heading=none,segment=1]
+\end{frame}
+
+% Format another set of references separately.
+% This is useful if you present your personal publications
+% without having to cite them in your talk or mix them with 
+% the rest of your bibliography
+\begin{refsegment}
+	\begin{frame}[noframenumbering]{Additional references}
+		% References you want to list
+		\nocite{%
+			blassel:tel-04041483,
+			abouelhodaReplacingSuffixTrees2004,
+			acioly-regnierIdentifyingDidacticSociocultural2008}
+		\printbibliography[heading=none,segment=2]
+	\end{frame}
+\end{refsegment}

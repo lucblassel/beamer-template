@@ -3,6 +3,13 @@
 \documentclass[aspectratio=43,table]{beamer}
 \usetheme[progressbar=foot, numbering=fraction]{metropolis}
 
+% Control the display of presenter notes
+% Values: 
+%   slides:  Only display slides (default)
+%   notes:   Only display presenter notes
+%   both:    Display both slides (left) and notes (right)
+\def\NotesMode{slides}
+
 % for custom settings
 \newcommand{\defineVariable}[2]{\newcommand{#1}{#2}}
 
@@ -11,9 +18,11 @@
 \input{theme/drawing} % TiKZ options
 \input{theme/theme}   % Other theming options
 \input{theme/grid}    % Commands to draw portait grid
+\input{theme/notes}   % Handles presenter notes 
 
 % Set biblatex file to use
 \addbibresource{talk.bib}
+\addbibresource{add_refs.bib} % File for additional uncited references
 
 %%%%%%%%%%%%%%%%%%
 % OTHER PACKAGES %
@@ -34,7 +43,7 @@
 \defineVariable{\venue}{Venue}
 \defineVariable{\presenter}{Presenter}
 \title{My Title}
-\author{\textbf{Presenter}, author 2, author 3}
+\author{\textbf{\presenter}, author 2, author 3}
 \date{\venue\;-\;\today}
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -47,12 +56,17 @@
 \input{titleframe.tex}
 
 % main content of the talk
-\input{content.tex}
+\begin{refsegment}
+	\input{content.tex}
+\end{refsegment}
 
 % custom thank you frame
 \input{thanks.tex}
 
-% references + appendixes
+% references
+\input{references.tex}
+
+% appendices
 \input{appendix.tex}
 
 \end{document}
